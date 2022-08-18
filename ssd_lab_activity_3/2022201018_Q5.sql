@@ -1,0 +1,1 @@
+Select DEPARTMENT.Mgr_ssn,DEPARTMENT.Dnumber,count(Distinct DEPENDENT.Dependent_name) from DEPARTMENT JOIN DEPT_LOCATIONS ON DEPARTMENT.Dnumber=DEPT_LOCATIONS.Dnumber JOIN DEPENDENT ON DEPARTMENT.Mgr_ssn=DEPENDENT.Essn Group By DEPARTMENT.Dnumber having(count(Distinct DEPT_LOCATIONS.Dlocation)) >=2;
