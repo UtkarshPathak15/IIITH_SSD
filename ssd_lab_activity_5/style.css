@@ -1,0 +1,51 @@
+
+body{ font-family: sans-serif; color: #222; 
+	font-size: 0.8em; line-height: 1.4;
+	 background-image: linear-gradient(to right, red, yellow);
+}
+
+h1{
+font-size: 30px;
+}
+
+.full{ top: 50%; 
+	   left: 50%; 
+	   position: absolute; 
+	   margin-top: -150px;  
+	   margin-left: -100px;
+	   
+	   }
+	   
+form{
+border : 3px solid #f1f1f1;	
+background-color:#ffffff;
+border-spacing:10px;
+	   padding: 20px;
+border-radius: 15px;	   
+box-shadow: 2px 2px;  
+}   
+
+button {
+  
+  background-color: gray;
+  color: white;
+  padding: 10px 20px;
+  margin: 8px 0;
+  border: 1px solid black;
+  width: 100%;
+  
+}
+
+input{
+  width: 100%;
+  padding: 12px 15px;
+  margin: 8px 0;
+  display: inline-block;
+  border: 1px solid #ccc;
+  box-sizing: border-box;
+}
+
+input:hover {
+   border-color: red;
+}
+

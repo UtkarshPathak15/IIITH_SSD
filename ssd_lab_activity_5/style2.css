@@ -1,0 +1,62 @@
+body{ font-family: "Arial",sans-serif; color: #222; 
+	font-size: 0.8em; line-height: 1.4;
+	 background-image: linear-gradient(to right, white, lightblue);
+}
+
+.full{ top: 50%; 
+	   left: 50%; 
+	   position: absolute; 
+	   margin-top: -150px;  
+	   margin-left: -100px;
+	   
+	   }
+	   
+table { border-collapse: collapse; border-spacing: 5px; }
+td { vertical-align: top;}	   
+	   
+table{
+	width: 100%;
+	
+}
+
+thead{
+    background-color:#405dad;
+	font-weight: bold;
+}
+
+
+
+td{	
+	border: 1px solid #ddd;
+	padding: 12px;
+	
+}		   
+
+input{
+  
+  padding: 12px 15px;
+  margin: 8px 0;
+  border: 1px solid #ccc;
+  box-sizing: border-box;
+}
+	
+.first{
+  
+  background-color: green;
+  color: white;
+  padding: 12px 20px;
+  margin: 8px 0;
+  border: 1px solid black;
+    
+}
+
+.last{
+  
+  background-color: red;
+  color: white;
+  padding: 12px 20px;
+  margin: 8px 0;
+  border: 1px solid black;
+    width: 100%
+}
+	

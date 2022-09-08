@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang = "en">
+<head>
+<meta charset = "UTF-8">
+<title> Student Form </title>
+<link rel="stylesheet" href="style2.css">
+
+<script>
+let data = [];
+        function insertRow(name,roll){
+            let l = data.lgth;
+            let table = document.getElementById("tableid");
+            let row = table.insertRow(l);
+            let cell1 = row.insertCell(0);
+            let cell2 = row.insertCell(1);
+            cell1.innerHTML = roll;
+            cell2.innerHTML = name;
+        }
+        function CreateFunction(){
+            let name = document.getElementById("roll").value;
+            let roll = document.getElementById("namee").value;
+            if(roll==="" || name===""){
+                return;
+            }else{
+                data.push({name, roll});
+                console.log(data);
+                insertRow(name,roll)
+            }
+            document.getElementById("roll").value = "";
+            document.getElementById("namee").value = "";
+        }
+        function deleteit(){
+            let l = data.lgth;
+            if(l == 0){
+                alert("No more student data available!");
+                return;
+            }
+            document.getElementById("tableid").deleteRow(l);
+            data.pop();
+        }
+
+
+</script>
+
+</head>
+<body>
+<div class="full">
+<h1>Student Records</h1>
+<div class="side">
+<form method="post">
+<div class="box">
+<label for="rollno"></label>
+<input type="text" id="roll" placeholder="RollNo" name="rollno" required>
+<label for="nmane" ></label>
+<input type="text" id="namee" placeholder="Name" name="nmane" required>
+<button type="add" class="first" onclick="CreateFunction()"><b>Add New</b></button>
+</form>
+</div>
+<div class="table">
+<table id="tableid">
+<thead>
+<td>Roll No.</td>
+<td>Student Name</td>
+</thead>
+
+</table>
+</div>
+</div>
+<button type="add" class="last" onclick="deleteit()"><b>Delete Last Entry</b></button>
+
+</body>
+</html>
