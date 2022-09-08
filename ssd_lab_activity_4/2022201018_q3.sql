@@ -1,0 +1,9 @@
+DELIMITER $$
+Create PROCEDURE checkit()
+BEGIN
+Select CUST_NAME,GRADE FROM customer where (OPENING_AMT+RECEIVE_AMT)>10000;
+END; $$
+
+DELIMITER ;
+
+CALL checkit();
