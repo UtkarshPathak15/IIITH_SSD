@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang = "en">
+<head>
+<meta charset = "UTF-8">
+<title> Form </title>
+
+<link rel="stylesheet" href="style.css">
+<script type="text/javascript" src="script.js">
+<style>
+
+
+
+</style>
+<script>
+
+function allDrop(ev)
+{
+ev.preventDefault();
+}
+
+function drag(ev)
+{
+ev.dragTransfer.setData("text",ev.target.id);
+}
+
+function drop(ev)
+{
+ev.preventDefault();
+var data = ev.dataTansfer.getData("text");
+ev.target.appendChild(document.getElementById(data));
+
+}
+
+</script>
+</head>
+<body>
+<h1 style="text-align: center;"> Team Form </h1>
+<form name="Tform" onsubmit="return doit()">
+<p> Manager Name <input type="text" name="Name" required></p>
+<br>
+<p> Group Email <input type="email" name="Mail" required></p>
+<br>
+<p> Server Username <input id="suname" type="text" name="suname" required></p>
+<div class="err" id ="err"></div>
+<br>
+<p> Server Password <input id="spwd" type="Password" name="spwd" required></p>
+<br>
+<p> Confirm Password <input id="cpwd" type="Password" name="cpwd" onBlur="check()" required></p>
+<br>
+<p> Team Lead <select type="text" name="tlead">
+			  <option> A </option>
+			  <option> B </option>
+			  <option> C </option>
+			  <option> D </option>
+			  <option> E </option>
+			  </select>
+</p>
+<br>
+
+<div id ="div1" ondrop="drop(event)" ondragover="allDrop(event)"></div>
+<div id ="div1" ondrop="drop(event)" ondragover="allDrop(event)"></div>
+<p id="drag1" draggable="true" ondragstart="drag(event)"> Drag Me</p>
+<br>
+
+<p> <input type="submit" onClick="Submit()" value="Submit" name="submit"></p> 
+</body>
+
+<html>
